@@ -1,9 +1,8 @@
 import json
 from logging import exception
-from re import search
 from tkinter import *
-from tkinter import messagebox
 import random
+from tkinter import messagebox
 
 YOUREMAIL ="enter your email here"
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -94,7 +93,9 @@ def find_password():
         messagebox.showerror(title='ERROR', message='No Data Found')
     else:
         if website_data in data:
-            messagebox.showerror(title='Details', message=f'Website:{website_data}\n Password:{data[website_data]["password"]}')
+            messagebox.showinfo(title='Details', message=f'Website:{website_data}\n Password:{data[website_data]["password"]}')
+        else:
+            messagebox.showerror(title='Error', message="Details not found")
         
     
 
